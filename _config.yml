@@ -86,8 +86,8 @@ author:
   location         : "Austin, Texas, USA"
   employer         :
   pubmed           : 
-  googlescholar    : 
-  email            :
+  googlescholar    : "https://scholar.google.com/citations?user=J-XmV3oAAAAJ&hl=en"
+  email            : "akhiljalan@utexas.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
