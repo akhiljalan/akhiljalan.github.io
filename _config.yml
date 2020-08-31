@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Akhil Jalan"
-  avatar           : "profile.png"
+  avatar           : "headshot.png"
   bio              : "PhD Student at UT Austin. Interested in theoretical computer science."
   location         : "Austin, Texas, USA"
   employer         :
