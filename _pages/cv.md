@@ -11,30 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* B.A. in Applied Mathematics (Highest Honors), UC Berkeley, May 2019. *Thesis: The Structure of the Sandpile Group*. *Advisor: Nikhil Srivastava*. 
+* Ph.D in Computer Science, UT Austin. In Progress. 
 
 Publications
 ======
@@ -53,7 +31,15 @@ Teaching
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+Work experience
+======
+* Mar 2020 - Aug 2020: Data Scientist, VergeSense
+  * Built regression models to predict demand for office space using proprietary person-counting data
+
+* Aug 2019 - Nov 2019: Software Engineer, WeWork. 
+  * Deployed ensemble random forest model for predicting economic value of real estate acquisitions
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Mathematics Department Peer Advisor, UC Berkeley, Aug 2018 - May 2019. 
