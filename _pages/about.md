@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Notee: This site is under construction!
+Note: This site is under construction! 
 
 I am a first-year PhD student at UT Austin, broadly interested in theoretical computer science and mathematics. 
 

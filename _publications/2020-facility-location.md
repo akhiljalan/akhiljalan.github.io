@@ -3,7 +3,7 @@ title: "Too many fairness metrics, is there a solution?"
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2
 <!-- excerpt: 'This paper is about the number 2. The number 3 is left for future work.' -->
-date: 2020
+date: 2020-03-16
 venue: 'Ethics of Data Science Conference'
 paperurl: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3554829'
 citation: "Too many fairness metrics, is there a solution?" Swati Gupta, Akhil Jalan, Gireeja Ranade, Helen Yang, Simon Zhuang. Ethics of Data Science Conference, 2020. 
