@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * B.A. in Applied Mathematics (Highest Honors), UC Berkeley, May 2019. *Thesis: The Structure of the Sandpile Group*. *Advisor: Nikhil Srivastava*. 
-* Ph.D in Computer Science, UT Austin. In Progress. 
+* Ph.D in Computer Science, UT Austin. In Progress (Aug 2020-Present).
 
 Publications
 ======
