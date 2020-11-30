@@ -12,7 +12,6 @@ div.photo {
     margin-top: 40px;
     width: 200px;
     height: 200px;
-    background-image: url('pasin.png');
     float: right;
 }
 
@@ -31,12 +30,12 @@ a:visited {
 
 a:link {
     text-decoration: none;
-    color: purple;
+    color: #7400b8;
 }
 
 a:hover {
     text-decoration: none;
-    color: green;
+    color: #72efdd;
 }
 
 .pt {
