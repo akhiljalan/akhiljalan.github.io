@@ -25,17 +25,17 @@ div.main {
 
 a:visited {
     text-decoration: none;
-    color: purple;
+    color: #00a6fb;
 }
 
 a:link {
     text-decoration: none;
-    color: #7400b8;
+    color: #00a6fb;
 }
 
 a:hover {
     text-decoration: none;
-    color: #72efdd;
+    color: #006494;
 }
 
 .pt {
