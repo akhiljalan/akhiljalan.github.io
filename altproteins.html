@@ -10,7 +10,23 @@
 <div class="allmain">
 <div class="main">
 
-<p>This page will detail some of my work on alternative proteins research as part of my PhD and collaboration with the <a href="https://thecmmc.org/">Cultivated Meat Modeling Consortium.</a></p>
+<p>This page will detail some of my work on alternative proteins research as part of my PhD research and collaboration with the <a href="https://thecmmc.org/">Cultivated Meat Modeling Consortium.</a></p>
+
+<h2> Ongoing Research: Protein Interaction Inference via Graph Transfer Learning </h2>
+
+
+Protein interaction networks are crucial tools for understanding the interaction of a cell line with candidate growth factors and recombinant proteins in a culture. However, network data are missing or incomplete for many cell lines of interest. Therefore, we augment protein interaction data using <em>graph transfer learning</em> algorithms. These algorithms leverage information about protein interaction networks for better-studied cell lines to infer interactions for the true cell line of interest. 
+<br>
+
+<img style=”float: right; padding: 0px 50px 50px 0px;” src="files/ppi_comparison_300_nodes.png" width="800" height="500" align="right"  /><p>
+
+In the figure, we show an example comparing 300 nodes in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ``align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
+
+<br>
+<br>
+In addition to learning from the differences in network data, algorithms should leverage prior knowledge of the differences between species so as to not overfit proteomic data. A promising approach is to use phylogenetic tree distance as a starting point for the transfer learner. In technical terms, phylogenetic information can parametrize a Bayesian prior for the distribution shift between the proteomes of different species. 
+<br>
+
 
 <h2> Short Article: A Small-Data Approach to Machine Learning in Cellular Agriculture </h2>
 
