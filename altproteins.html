@@ -12,15 +12,14 @@
 
 <p>This page will detail some of my work on alternative proteins research as part of my PhD research and collaboration with the <a href="https://thecmmc.org/">Cultivated Meat Modeling Consortium.</a></p>
 
-<h2> Ongoing Research: Protein Interaction Inference via Graph Transfer Learning </h2>
+<h2> Ongoing Research: Biological Network Inference via Graph Transfer Learning </h2>
 
-
-Protein interaction networks are crucial tools for understanding the interaction of a cell line with candidate growth factors and recombinant proteins in a culture. However, network data are missing or incomplete for many cell lines of interest. Therefore, we augment protein interaction data using <em>graph transfer learning</em> algorithms. These algorithms leverage information about protein interaction networks for better-studied cell lines to infer interactions for the true cell line of interest. 
+In systems biology, <em>biological networks</em> are used to describe a diverse range of organism behaviors such as metabolism, gene expression, etc. For example, <em>protein interaction networks</em> are crucial tools for understanding the interaction of a cell line with candidate growth factors and recombinant proteins in a culture. However, these network data are missing or incomplete for many cell lines of interest, such as <em>bos taurus</em>. Therefore, we augment protein interaction data using <em>graph transfer learning</em> algorithms. These algorithms leverage information about protein interaction networks for better-studied cell lines (such as homo sapiens or CHO) to infer interactions for the true cell line of interest. 
 <br>
 
 <img style=”float: right; padding: 0px 50px 50px 0px;” src="files/ppi_comparison_300_nodes.png" width="800" height="500" align="right"  /><p>
 
-In the figure, we show an example comparing 300 nodes in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ``align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
+In the figure, we show an example comparing 300 nodes in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
 
 <br>
 <br>
