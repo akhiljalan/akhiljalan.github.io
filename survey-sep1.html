@@ -70,6 +70,13 @@ Data from the report highlight an increasing need for machine learning, data ana
 
 <p>In alt proteins, researchers have used active learning or DoE to optimize cell culture media: the nutrient broth that cells eat to grow and multiply. Some important papers in this area are <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/elsc.202300005">Cosenza et al</a>, who use multi-objective Bayesian optimization, and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0048969723036112">Nikkhah et al,</a> who use genetic algorithms. Note that these two papers came out of UC Davis and Tufts University respectively - both of these institutions are hubs for alt proteins research. </p>
 
+
+<figure>
+    <img src="files/survey/bayesopt.png">
+    <figcaption><em>Figure 2: Bayesian optimization is an algorithm that learns a nonlinear black-box function by querying the function at points chosen to reduce uncertainty in an optimal fashion. It is a workhorse algorithm in black-box optimization and hyperparameter optimization. A study from UC Davis by <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/elsc.202300005">Cosenza et al</a> used Bayesian optimization to actively design experiments and optimize a cell culture medium for mice cells. Source: <a href="https://hackernoon.com/bayesian-optimization-in-trading-4fb918fc52a7">Sergey Malchevskiy.</a></em></figcaption>
+</figure>
+
+
 <p>Obviously, active learning has a very broad scope and may be useful beyond just culture media optimization. I would speculate that it is more useful in cases where first-principles models are lacking and one must resort to black box optimization; in particular, in so-called “high throughout” experimental settings. </p>
 
 <p>Key words: Active learning, design of experiments, response surface method, Bayesian optimization, high-throughput experiments</p>
@@ -89,7 +96,18 @@ Data from the report highlight an increasing need for machine learning, data ana
 
 <p>Note that the suffix “omics” is a catch-all term that loosely refers to several areas, including genomics, transcriptomics, metabolomics, and others. The most relevant “omics” area for us is “metabolomics,” since we are concerned with how cells grow and develop based on their specific metabolic consumption patterns and waste product creation. However, there is a growing interest in so-called “multi-omics” approaches that <a href="https://www.embopress.org/doi/full/10.15252/msb.20178124">combine datasets of multiple types of omics, via e.g. principal component analysis.</a> </p>
 
+<figure>
+    <img src="files/survey/omics.png">
+    <figcaption><em>Figure 3: The "Central Dogma of Molecular Biology" divides the activity of organisms into a hierarchy, proceeding from DNA to RNA to proteins to phenotype. Each of these activities is described by its own "omics" field, e.g. genomics or metabolomics. Note that there are effects in the reverse direction as well, such as DNA methylation or transcriptional regulation. Nevertheless, this picture is a dominant paradigm and used implicitly throughout the field. Source: <a href="https://www.mdpi.com/1422-0067/22/3/1160">Raja et al 2021.</a></em></figcaption>
+</figure>
+
 <p>These ideas are of course not new, even within cell culture. For example, <a href="https://www.nature.com/articles/nbt0988-1041">this 1988 article</a> contains detailed discussion of metabolic pathways in mammalian cells and the efficiency of ATP production through different kinds of metabolic activity. </p>
+
+<figure>
+    <img src="files/survey/pathways.png">
+    <figcaption><em>Figure 4: Central carbon metabolism is key to the growth and division of cells. Omics datasets often model these pathways mathematically, through metabolic network analysis, flux balance analysis, or other methods. Source: <a href="https://www.researchgate.net/publication/337743524_Aberrant_mitochondrial_function_in_ageing_and_cancer">Whitehall and Greaves 2020.</a></em></figcaption>
+</figure>
+
 
 <p>Key words: Metabolomics, flux balance analysis, stoichiometry, genome scale metabolic models (GEMs), multi-omics, mass spectrometry, nuclear magentic resonance (NMR) </p>
 
@@ -131,7 +149,7 @@ A key aspect of state characterization for bioprocesses is the dynamic propertie
 
 <figure>
     <img src="files/survey/cmmc.png">
-    <figcaption><em>Figure 2: Computational fluid dynamics is useful for understanding the effects of bioreactor operating conditions on cell growth, through physical phenomena such as shear forces. Source: <a href="https://thecmmc.org/news/cmmc-reveals-new-bioreactor-modeling-technology">the CMMC</a></em>.</figcaption>
+    <figcaption><em>Figure 5: Computational fluid dynamics is useful for understanding the effects of bioreactor operating conditions on cell growth, through physical phenomena such as shear forces. Source: <a href="https://thecmmc.org/news/cmmc-reveals-new-bioreactor-modeling-technology">the CMMC</a></em>.</figcaption>
 </figure>
 
 
