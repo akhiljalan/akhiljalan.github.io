@@ -12,7 +12,7 @@
 <div class="allmain">
 <div class="main">
 
-<h1>In silico Alternative Proteins: A short survey</h1>
+<h1><em>In silico</em> Alternative Proteins: A short survey</h1>
 <style>
     .centered-text {
         text-align: center;
@@ -23,14 +23,27 @@
 <p class="centered-text">Department of Computer Science, UT Austin</p>
 <p class="centered-text">September 1, 2023</p>
 
+<p><em>Last updated: October 6, 2023.</em></p>
+
 <p><b>Table of contents</b>. Readers are encouraged to skip to the list of problems, as it is the most important section.</p>
 <ul id="table-of-contents">
     <li><a href="#section1">Who is this document for?</a></li>
     <li><a href="#section2">Why does it matter?</a></li>
     <li><a href="#section3">Why is there a skills gap?</a></li>
     <li><a href="#section4">List of problems</a></li>
+    <ul>
+        <li><a href="#topic1">Active learning and experimental design</a></li>
+        <li><a href="#topic2">Protein Engineering <i>in silico</i></a></li>
+        <li><a href="#topic3">Bioinformatics and multi-omics models</a></li>
+        <li><a href="#topic4">Bioprocess state estimation and control</a></li>
+        <li><a href="#topic5">Computational Fluid Dynamics for exploratory and digital twin modeling</a></li>
+        <li><a href="#topic6">3D Models for Adherent Cell Cultures and Scaffolds</a></li>
+        <li><a href="#topic7">Models for Texturization and Extrusion</a></li>
+        <li><a href="#topic8">Other Topics</a></li>
+    </ul>
     <li><a href="#section5">Concluding thoughts</a></li>
     <li><a href="#section6">About the author</a></li>
+    <li><a href="#section7">Acknowledgments</a></li>
 </ul>
 
 <h1 id="section1">Who is this document for?</h1>
@@ -40,7 +53,7 @@
 <p>The field of alternative proteins (“alt proteins”) has exploded in the past decade. In my opinion, this food technology is a crucial component of the societal transition away from factory farming and industrialized animal agriculture, which are serious contributors to greenhouse gas emissions, deforestation, land use, water use, and detrimental to human health.</p>
 <p>There now exist many academic labs and startups in the alt proteins space. However, their technical staffs consist mainly of experts in biology, chemistry, or related fields (the “wet lab” disciplines). As the field of alt proteins matures and scales it will also need expertise from beyond these disciplines to succeed. Quoting a recent <a href="https://gfi.org/blog/alternative-protein-startups-underscore-the-need-for-scientific-and-engineering-talent/">report by the Good Food Institute</a>:</p>
 <blockquote>
-    <p>““94% viewed technical talent bottlenecks as posing <b>“very severe” or “moderately severe” challenges to their organization’s long-term success. Beneath the umbrella of technical talent, there is an especially significant need for an infusion of scientific and engineering talent to bolster the sector’s research and development capacity</b>…we expect the nature of talent needs to shift as the sector matures and increasingly transitions toward commercial-scale production when <b>the plurality of the technical workforce will likely become manufacturing operators and technicians rather than benchtop scientists</b>.” (Emphasis mine).</p>
+    <p>“94% viewed technical talent bottlenecks as posing <b>“very severe” or “moderately severe” challenges to their organization’s long-term success. Beneath the umbrella of technical talent, there is an especially significant need for an infusion of scientific and engineering talent to bolster the sector’s research and development capacity</b>…we expect the nature of talent needs to shift as the sector matures and increasingly transitions toward commercial-scale production when <b>the plurality of the technical workforce will likely become manufacturing operators and technicians rather than benchtop scientists</b>.” (Emphasis mine).</p>
 </blockquote>
 
 Data from the report highlight an increasing need for machine learning, data analysis, experimental design, protein science, and several more specialized technical areas that I will touch on below. 
@@ -59,13 +72,13 @@ Data from the report highlight an increasing need for machine learning, data ana
 </ul>
 
 <h1 id="section3">What should a “dry lab” scientist or engineer do?</h1>
-<p>Interdisciplinary work is not for the faint of heart. While I believe there are important and technically rich problems in alt proteins that will require in silico expertise, I also believe that in applied work, domain knowledge is key. In practice, this means listening carefully to one’s colleagues in the wet lab and working hard to learn their way of thinking and specific technical vocabulary.</p>
+<p>Interdisciplinary work is not for the faint of heart. While I believe there are important and technically rich problems in alt proteins that will require <em>in silico</em> expertise, I also believe that in applied work, domain knowledge is key. In practice, this means listening carefully to one’s colleagues in the wet lab and working hard to learn their way of thinking and specific technical vocabulary.</p>
 <p>Still, I believe that the field needs scientists and engineers from outside of the wet lab disciplines; moreover, I believe that it is not building enough of a talent pipeline for such people. This document attempts to help address this by laying out concrete technical problems that people without wet lab backgrounds can work on. With a better sense of what they might end up doing, motivated people can try to dive deeper on these problems and get involved in the field through full-time employment, consulting, research, or independent work.</p>
 
 <p>Without further ado, let me share some concrete problems.</p>
 
 <h1 id="section4">List of problems</h1>
-<h2>Active learning and experimental design</h2>
+<h2 id="topic1">Active learning and experimental design</h2>
 <p>A universal problem in experimental science is the design of experiments (DoE): given an experimental budget and a function one wants to learn (or a set of hypotheses one wants to test), what experiments are maximally informative? Moreover, if we are allowed to perform many rounds of experiments, how can we adaptively design experiments on the basis of freshly obtained information (this is called “sequential DoE” or “active learning”)? </p>
 
 <p>In alt proteins, researchers have used active learning or DoE to optimize cell culture media: the nutrient broth that cells eat to grow and multiply. Some important papers in this area are <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/elsc.202300005">Cosenza et al</a>, who use multi-objective Bayesian optimization, and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0048969723036112">Nikkhah et al,</a> who use genetic algorithms. Note that these two papers came out of UC Davis and Tufts University respectively - both of these institutions are hubs for alt proteins research. </p>
@@ -79,22 +92,22 @@ Data from the report highlight an increasing need for machine learning, data ana
 
 <p>Obviously, active learning has a very broad scope and may be useful beyond just culture media optimization. I would speculate that it is more useful in cases where first-principles models are lacking and one must resort to black box optimization; in particular, in so-called “high throughout” experimental settings. </p>
 
-<p>Key words: Active learning, design of experiments, response surface method, Bayesian optimization, high-throughput experiments</p>
+<p><b>Key words:</b> Active learning, design of experiments, response surface method, Bayesian optimization, high-throughput experiments</p>
 
-<h2>Protein Engineering in silico</h2>
+<h2 id="topic2">Protein Engineering <em>in silico</em></h2>
 <p>The number one cost driver for cultivated meat is cell culture media (see this <a href="https://www.ark-biotech.com/post/cultivated-meats-path-to-price-parity">techno-economic analysis</a>): the nutrient broth that cells eat to grow and multiply. A key component of cell culture media is a cocktail of molecules that perform cell signaling, especially proliferation and development. </p>
 
 <p>Using protein engineering, researchers can design better and cheaper growth factors. For example, <a href="https://pubmed.ncbi.nlm.nih.gov/29278409/">researchers developed a variation of Fibroblast Growth Factor 2 (“FGF2-STAB”) using a computational protein engeering pipeline</a> combined with lab experiments. This is now a product offered by the company <a href="https://www.enantis.com/">Enantis</a>. With the advent of AlphaFold and GPT-type tools for sequence modeling, protein engineering is an especially ripe area of application for machine learning; any ML or DL experts should seriously consider pursuing this area further. </p>
 
-<p>Key words: Protein engineering, growth factors, protein thermostability, de novo protein synthesis, molecular dynamics </p>
+<p><b>Key words:</b> Protein engineering, growth factors, protein thermostability, <em>de novo</em> protein synthesis, molecular dynamics </p>
 
-<h2>Bioinformatics and multi-omics models</h2>
+<h2 id="topic3">Bioinformatics and multi-omics models</h2>
 <p>In addition to purely experimental approaches, researchers use first principles models from bioinformatics to optimize cell culture media and bioprocesses. I would highly recommend the interested reader to this <a href="https://vanheronlabs.com/portfolio-item/van-heron-labs-litepaper/">white paper by Van Heron labs</a> (and references therein) for more details. Quoting, </p>
 <blockquote>
     <p>“Van Heron Labs uses omics data, primarily gene-expression data, and computing (bioinformatics and AI) to create better media and feed formulations for cells to increase the productivity/titer and robustness of bio-based processes and applications. <b>The VHL platform uses genetic information as a tool to gain insights into cellular function and determines the most efficient macro and micronutrient inputs</b>…This precision nutrition approach optimizes cellular metabolism, which, in turn, optimizes the bio-process or cell-based application of interest….<b>In silico approaches, such as flux balance analysis and, recently, genome-scale metabolic modeling (GEMs), have been used to assess the metabolites the cells utilize in the highest concentrations</b>. Metabolomics of in-vivo states is often utilized to create more optimal media formulations (Ex., gut metabolomics to create E. coli media, or serum metabolomics to create de-novo media for obscure species/cell types). <b>In silico strategies save considerable experimental effort and accelerate development (Huang et al., 2020)</b>." (Emphasis mine).</p>
 </blockquote>
 
-<p>Note that the suffix “omics” is a catch-all term that loosely refers to several areas, including genomics, transcriptomics, metabolomics, and others. The most relevant “omics” area for us is “metabolomics,” since we are concerned with how cells grow and develop based on their specific metabolic consumption patterns and waste product creation. However, there is a growing interest in so-called “multi-omics” approaches that <a href="https://www.embopress.org/doi/full/10.15252/msb.20178124">combine datasets of multiple types of omics, via e.g. principal component analysis.</a> </p>
+<p>Note that the suffix “omics” is a catch-all term that loosely refers to several areas, including genomics, transcriptomics, metabolomics, lipidomics, and others. The most relevant “omics” area for us is “metabolomics,” since we are concerned with how cells grow and develop based on their specific metabolic consumption patterns and waste product creation. However, there is a growing interest in so-called “multi-omics” approaches that <a href="https://www.embopress.org/doi/full/10.15252/msb.20178124">combine datasets of multiple types of omics, via e.g. principal component analysis.</a> </p>
 
 <figure>
     <img src="files/survey/omics.png">
@@ -109,14 +122,14 @@ Data from the report highlight an increasing need for machine learning, data ana
 </figure>
 
 
-<p>Key words: Metabolomics, flux balance analysis, stoichiometry, genome scale metabolic models (GEMs), multi-omics, mass spectrometry, nuclear magentic resonance (NMR) </p>
+<p><b>Key words:</b> Metabolomics, flux balance analysis, stoichiometry, genome scale metabolic models (GEMs), multi-omics, mass spectrometry, nuclear magentic resonance (NMR) </p>
 
-<h2>Bioprocess state estimation and control</h2>
+<h2 id="topic4">Bioprocess state estimation and control</h2>
 <p>Controls theory is a broad and old engineering discipline that traces its roots to the operation of steam engines in the 19th century. Put simply, controls refers to the optimization problem of steering a dynamic process towards a desirable outcome - for example, steering a plane through difficult skies with autopilot. </p>
 
 <p>Nowadays, controls is absolutely central to mechanical and electrical engineering, but not as prominent in bioengineering and chemical engineering. Two important reasons for this are the difficulty of state estimation (what is the current state of the process?) and dynamical characterization (how does the process evolve in time?). To wit: the basic physics of steam engines (heat transfer, convention, compression, friction) were understood in the 19th century. The internal workings of a single mammalian cell, however, are far from fully characterized. </p>
 
-<p>Nevertheless, one can make up for a poor understanding of dynamics with an excellent real-time estimate of state. The more detailed and frequent information we have about a bioprocess (or any other black-box process), the more we can estimate an approximation to its dynamics and steer it towards desirable outcomes. </p>
+<p>Nevertheless, one can make up for a poor understanding of dynamics with an excellent real-time estimate of state. The more detailed and frequent information we have about a bioprocess (or any other black-box process), the more we can approximate its dynamics and steer it towards desirable outcomes. </p>
 
 <p>Therefore, estimating the state of a bioprocess (e.g. a mammalian cell culture for cultivated meat, or a microbial culture for fermentation) is a key step for process optimization. However, there is no tool that can satisfy all of the following desiderata for bioprocesses: </p>
 <ul>
@@ -127,16 +140,16 @@ Data from the report highlight an increasing need for machine learning, data ana
 <li>Sterile: The sample preparation or measurement does not introduce a contamination risk. </li>
 </ul>
 
-<p>Nevertheless, promising approaches to cell state estimation abound. We refer to reader to this excellent <a href="https://onlinelibrary-wiley-com.ezproxy.lib.utexas.edu/doi/full/10.1002/biot.201600546">survey on controls in bioprocessing</a>, which highlights soft sensing as a particularly fruitful direction. A “soft sensor” is one that gives a measurement which contains information about the process state, but not the direct state variables themselves. For example, a smoke detector is a “soft sensor” for fire. </p>
+<p>Nevertheless, promising approaches to cell state estimation abound. We refer the reader to this excellent <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/biot.201600546">survey on controls in bioprocessing</a>, which highlights soft sensing as a particularly fruitful direction. A “soft sensor” is one that gives a measurement which contains information about the process state, but not the direct state variables themselves. For example, a smoke detector is a “soft sensor” for fire. </p>
 
 <p>Many soft sensors in biotechnology involve imaging or spectroscopic techniques - see e.g. <a href="https://www.sciencedirect.com/science/article/pii/S0939641121001430">this paper</a>. Such sensors can be fused with state estimation algorithms such as Kalman filters - for example, as in the works of <a href="https://scholar.google.com/citations?user=aVrDHFQAAAAJ&hl=en&oi=ao">Andrea Tuveri</a> or <a href="https://www.sciencedirect.com/science/article/pii/S0939641121001430">Marieke Klijn</a>. Some particular sensor types include dielectric spectroscopy, Raman spectroscopy, and NIR spectroscopy. </p>
 
 <p>State estimation is therefore another statistical problem, but one that may be particularly accessible to those with signal processing backgrounds. </p>
 
-<p>Key words: Quality by control, Process Analytical Technology, soft sensing, IR spectroscopy, dielectric spectroscopy, NIR spectroscopy, IR spectroscopy, in-situ </p>
+<p><b>Key words:</b> Quality by control, Process Analytical Technology, soft sensing, IR spectroscopy, dielectric spectroscopy, NIR spectroscopy, IR spectroscopy, in-situ </p>
 
-<h2>Computational Fluid Dynamics for exploratory and digital twin modeling</h2>
-A key aspect of state characterization for bioprocesses is the dynamic properties of fluid and gas mixing due to sparging (introducing oxygen, nitrogen, CO2) and agitation (e.g. due to the rotation of an impeller in a stirred-tank reactor). </p>
+<h2 id="topic5">Computational Fluid Dynamics for exploratory and digital twin modeling</h2>
+A key aspect of state characterization for bioprocesses is the dynamic properties of fluid and gas mixing due to sparging (introducing oxygen, nitrogen, CO&#x2082) and agitation (e.g. due to the rotation of an impeller in a stirred-tank reactor). </p>
 
 <p>CFD is an extremely difficult algorithmic problem that requires both a strong understanding of the underlying mathematics (which are, of course, <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_existence_and_smoothness">themselves famously difficult</a>), and also a pretty good programming and algorithmic understanding. Moreover, it is well-motivated, since fluid dynamics are what largely determine mass transfer in bioreactors. Mass-transfer is a key determinant of bioreactor productivity - see e.g. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1385894721001911">this paper.</a> </p>
 
@@ -144,22 +157,20 @@ A key aspect of state characterization for bioprocesses is the dynamic propertie
 
 <p>There are many groups working on CFD modeling for alt proteins - two that I would highlight are the <a href="https://thecmmc.org/">Cultivated Meat Modeling Consortium</a> and <a href="https://scholar.google.com/citations?user=07Pxn6QAAAAJ&hl=en&oi=ao">Cees Haringa’s group</a> at TU Delft. </p>
 
-<p>The CMMC has tackled the issue of jointly modeling cell dynamics and fluid dynamics by <a href="https://www.biorxiv.org/content/10.1101/2022.08.31.505282v1.abstract">combining CFD with agent-based models for mammalian cells on microcarriers</a>. In that study, a key question was the limits of cell tolerance for shear stress, which is a major concern in large-scale cultures. </p>
-
+<p>The CMMC has tackled the issue of jointly modeling cell dynamics and fluid dynamics by <a href="https://www.biorxiv.org/content/10.1101/2022.08.31.505282v1.abstract">combining CFD with agent-based models for mammalian cells on microcarriers</a>. In that study, a key question was the limits of cell tolerance for shear stress, which is a major concern in large-scale cultures. Agent-based models have the advantage of flexbility, since they can describe many kinds of behavior and cell types provided that they are parametrized with enough data. However, ABMs are computationally intensive at large scales since one needs to perform a forward simulation step for each agent separately, and this is prohibitively expensive if there are billions of cells. While parallelism can reduce the wall time of such simulations, it cannot reduce the overall amount of compute required.</p>
 
 <figure>
     <img src="files/survey/cmmc.png">
     <figcaption><em>Figure 5: Computational fluid dynamics is useful for understanding the effects of bioreactor operating conditions on cell growth, through physical phenomena such as shear forces. Source: <a href="https://thecmmc.org/news/cmmc-reveals-new-bioreactor-modeling-technology">the CMMC</a></em>.</figcaption>
 </figure>
 
+<p>By contrast, Haringa’s group has developed <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/elsc.201600061">an “organism lifeline” approach</a> with Euler-Lagrange dynamics, which studies the trajectories of specific cells (in this case, microbes) as they travel through different regions of a bioreactor and experience different fluid dynamics regimes over time. By combining this with first principles differential equations models for microbe growth kinetics, they are able to study the effect of different fluid dynamical parameters on overall process outcomes. </p>
 
-<p>By contrast, Haringa’s group has developed <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/elsc.201600061">an “organism lifeline” approach</a> with Euler-Lagrange dynamics, which studies the trajectories of specific cells (in this case, microbes) as they travel through different regions of a bioreactor and experience different fluid dynamics regimes over time; by combining this with first principles differential equations models for microbe growth kinetics, they are able to study the effect of different fluid dynamical parameters on overall process outcomes. </p>
+<p>In general, CFD will become increasingly important at large scales, and is therefore an important topic to tackle for the industry. Off-the-shelf CFD tools, in addition to being difficult for non-experts to use, are insufficient for jointly modeling the dynamics of fluids and gases with the evolving state of individual cells in microbial or cell culture systems. These problems will require serious <a href="https://en.wikipedia.org/wiki/Multiscale_modeling">multiscale modeling</a> to go beyond the current, largely heuristic applications of CFD. </p>
 
-<p>In general, CFD will become increasingly important at large scales, and is therefore an important topic to tackle for the industry. Off-the-shelf CFD tools, in addition to being difficult for non-experts to use, are insufficient to jointly model the dynamics of fluids and gases with the evolving state of a bioprocess such as a fermentation or mammalian cell culture. These problems will require serious <a href="https://en.wikipedia.org/wiki/Multiscale_modeling">multiscale modeling</a> to go beyond the current, largely heuristic applications of CFD. </p>
+<p><b>Key words:</b> Mass transfer coefficient, kLa, shear stress, mixing time, Euler-Lagrange, Navier-Stokes, multiscale modeling</p>
 
-<p>Key words: Mass transfer coefficient, kLa, shear stress, mixing time, Euler-Lagrange, Navier-Stokes, multiscale modeling</p>
-
-<h2>3D Models for Adherent Cell Cultures and Scaffolds</h2>
+<h2 id="topic6">3D Models for Adherent Cell Cultures and Scaffolds</h2>
 <p>Most of the work mentioned so far analyzes cell culture processes up to and including the cell proliferation stage; the goal, in this step, is to just multiply the cells as much as possible before inducing them to differentiate into more specific cell types such as muscle and fat cells. In this stage, the 3D arrangement and structure of the cells into a food product becomes important, and this raises its own set of challenges. </p>
 
 <p>One method to get a structured 3D product is to use a porous scaffold that cells attach to during development. It is known that having a mass to adhere to (an “extracellular matrix”) encourages development and differentiation of cells. </p>
@@ -168,33 +179,36 @@ A key aspect of state characterization for bioprocesses is the dynamic propertie
 
 <p>Key words; Porous scaffold, extracellular matrix, tissue engineering</p>
 
-<h2>Models for Texturization and Extrusion</h2> 
+<h2 id="topic7">Models for Texturization and Extrusion</h2> 
 As in the previous problem, I wish to highlight the importance of modeling for texturization and extrusion technologies. Currently these are used in plant-based meat, and likely in cultivated meat and fermentation products as well.</p>
 
-<p>Extrusion, in particular, is poorly understood; the mapping from machine setting to taste outcome is considered a black box. To remedy this, researchers have used simple statistical approaches to inform <a href="https://www.sciencedirect.com/science/article/pii/S2095311921638923">data-driven approaches to high-moisture extrusion, such as principal component analysis (PCA)</a>. As in the previous black-box problem we saw (cell culture media), I would speculate that combining this purely statistical approach with first-principles understanding and physics models would give better results. For example, <a href="https://www.sciencedirect.com/science/article/abs/pii/B978178242284600009X">this survey highlights 3D flow, thermal stress, and mechanical stress as key areas for modeling</a>. There is also industry interest in combining machine learning approaches with extrusion technology - see e.g. <a href="https://vegconomist.com/manufacturing-technology/industry-leaders-launch-greenprotein-ai/">GreenProtein AI.</a></p>
+<p>Extrusion, in particular, is poorly understood; the mapping from machine setting to taste and texture outcomes is considered a black box. To remedy this, researchers have used simple statistical approaches to inform <a href="https://www.sciencedirect.com/science/article/pii/S2095311921638923">data-driven approaches to high-moisture extrusion, such as principal component analysis (PCA)</a>. As in the previous black-box problem we saw (cell culture media), I would speculate that combining this purely statistical approach with first-principles understanding and physics models would give better results. For example, <a href="https://www.sciencedirect.com/science/article/abs/pii/B978178242284600009X">this survey highlights 3D flow, thermal stress, and mechanical stress as key areas for modeling</a>. There is also industry interest in combining machine learning approaches with extrusion technology - see e.g. <a href="https://vegconomist.com/manufacturing-technology/industry-leaders-launch-greenprotein-ai/">GreenProtein AI.</a></p>
 
-<p>Key words: Low-moisture extrusion, high-moisture extrusion
+<p><b>Key words:</b> Low-moisture extrusion, high-moisture extrusion
 
-<h2>Topics I have neglected</h2> 
+<h2 id="topic8">Other Topics</h2> 
 
 In the interest of time and space, I will not surveyed every possible topic; however, several worthy ones come to mind, including: 
 
 <ul>
-    <li>Techno-economic analyses and operations research. Much of the work on TEAs to date has focused on either economic forecasting or feasibility assessment. However, the fusion of technical and economic modeling should be useful to any company evaluating trade-offs between technical projects and economic opportunities. E.g. "should we purchase bioreactor X or Y?" or " should we operate our stirred tank reactor at higher RPM given that energy price is Z?" This is the domain of integrated technical and economic modeling, which is sometimes called operations research.</li>
-    <li>Genetic engineering and genomics. These are obviously computationally intensive fields and ones that may have an enormous impact on alt proteins. Aside from obvious applications of genetic engineering, gene sequencing has become so cheap that it is plausibly a useful component of a broader high-throughput experimental setup for process development.</li>
+    <li>Integration of technical and economic modeling for optimization. However, the fusion of technical and economic modeling should be useful to any company evaluating trade-offs between technical projects and economic opportunities. E.g. "should we purchase bioreactor X or Y?" or " should we operate our stirred tank reactor at higher RPM given that energy price is Z?" This is the domain of integrated technical and economic modeling, which is sometimes called ''operations research.'' This kind of work is distinct from techno-economic analysis (TEA), which instead uses technical modeling and assumptions to inform an economic forecast or feasibility estimate. Of course the two are closely related, but a useful simplification is that TEAs are typically external analyses of current technology, while operations research is an internal analysis of current or future technology. </li>
+    <li>Genetic engineering and geneomics. Obviously, these are computationally intensive fields and ones that may have an enormous impact on alt proteins. Aside from obvious applications of genetic engineering, gene sequencing has become so cheap that it is plausibly a useful component of a broader high-throughput experimental setup for process development.</li>
     <li>Marketing and social sciences. Data-driven marketing is a massive area of technical research - just ask Google or Meta. This topic is incredibly important to the success of the industry (arguably, more important than all of the topics I have discussed so far put together), and more accessible than some of the more specialized technical areas we have discussed (like CFD or protein engineering). Therefore, it is more than worthy of consideration for any statistically inclined person.</li>
 </ul>
 
 <h1 id="section5">Concluding thoughts</h1>
-<p>In this survey, I have attempted to give a brief and incomplete overview of some important technical problems in alternative proteins that require in silico expertise. In subsequent articles I hope to raise further problems and go into more detail about the problems discussed here.</p>
+<p>In this survey, I have attempted to give a brief and incomplete overview of some important technical problems in alternative proteins that require <em>in silico expertise</em>. In subsequent articles I hope to raise further problems and go into more detail about the problems discussed here.</p>
 
 <p>As mentioned previously, I believe that in applied work it is necessary to engage deeply with domain experts to have a real impact. Nevertheless, interdisciplinary work is a two-way street, and I believe that alternative proteins researchers and practitioners have much to gain from their colleagues outside of the wet lab as well. With that in mind, I hope that scientists and engineers in all disciplines will engage in more collaborations for the sake of alt proteins’ continued growth and success. We are all depending on you.</p> 
 
 <h1 id="section6">About the author</h1>
-<p>I am a 4th-year Ph.D. student in Computer Science at the Institute for Foundations of Machine Learning at UT Austin. My background is in applied mathematics and statistics. In 2022, I became interested in alternative proteins work and began to transition my career focus to work in this field. However, it was initially difficult for me to find ways to apply my technical skills to this area.</p>
+<p>I am a 4th-year Ph.D. student in Computer Science at the Institute for Foundations of Machine Learning at UT Austin. My background is in applied mathematics and statistics. In 2022, I became interested in alternative proteins work and began to look for opportunities to work in this field. However, it was initially difficult for me to find ways to apply my technical skills to this area.</p>
 
 <p>After much research, and many conversations with patient and inviting colleagues, I found concrete problems in the field (mainly in cultivated meat) that I felt I could contribute to. So far, I have worked mainly at the Cultivated Meat Modeling Consortium and at Ark Biotech on problems involving applied optimization and statistics. See <a href="altproteins.html">this page on my website </a> for more details.</p>
 
+<h1 id="section7">Acknowledgments</h1>
+<p>My sincere thanks to <a href="https://www.lipifermscientific.com/">Dr. Greg Potter (Lipiferm Scientific)</a> for extensive feedback on an earlier version of this article, and to <a href="https://vanheronlabs.com/our-team/">Dr. Rebecca Vaught (Van Heron Labs)</a> for valuable discussions on bioinformatics and metabolic modeling. 
+</p>
 
 </div>
 </div>
