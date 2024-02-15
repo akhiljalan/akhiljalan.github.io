@@ -24,14 +24,19 @@ See this page for more details after the conference.
 
 <img style=”float: right; padding: 0px 50px 50px 0px;” src="files/process-dev-diagram.png
 " width="800" height="400" align="right"  /><p>
-
+<br> 
 Figure taken from <a href="https://www.ark-biotech.com/post/data-driven-process-development">this article</a>. 
 
 <h2> Survey Article: In Silico Alternative Proteins </h2>
 
+<figure>
+    <img src="files/survey/pathways.png">
+    <figcaption><em>Figure: Central carbon metabolism is key to the growth and division of cells. Omics datasets often model these pathways mathematically, through metabolic network analysis, flux balance analysis, or other methods. Source: <a href="https://www.researchgate.net/publication/337743524_Aberrant_mitochondrial_function_in_ageing_and_cancer">Whitehall and Greaves 2020.</a></em></figcaption>
+</figure>
+
 <p>I have written a brief and informal survey article on some important, concrete problems in alternative proteins that require expertise in the <it>in silico</it> scientfic and engineering disciplines (applied mathematics, statistics, computer science, electrical engineering, mechanical engineering, physics). Please see the survey at this link.</p> 
 
-<a href="survey-sep1.html">Link to survey</a>
+<a href="survey-sep1.html">[Link to survey (webpage)]</a>
 
 <h2> Biological Network Inference via Graph Transfer Learning </h2>
 
@@ -40,7 +45,13 @@ In systems biology, <em>biological networks</em> are used to describe a diverse 
 
 <img style=”float: right; padding: 0px 50px 50px 0px;” src="files/ppi_comparison_300_nodes.png" width="800" height="500" align="right"  /><p>
 
-In the figure, we show an example comparing 300 nodes in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
+<p><em>Caption</em>: We compare 300 nodes that are well-aligned in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). Note that the true networks are much larger. The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
+
+<img src="files/bos_taurus_bos_mutus_100_eigvec_inner_products.png" alt="Figure">
+
+<p><em>Caption</em>: In the figure, we show an example comparing top 100 eigenvectors of <em>Bos mutus</em> and <em>Bos taurus</em>. Inner product of 1.0 indicates maximal alignment, while -1.0 indicates maximal disalignment. We can think of the scores as roughly measuring correlations between clusters in the network.</p>
+
+
 
 <br>
 <br>
@@ -50,19 +61,20 @@ In addition to learning from the differences in network data, algorithms should 
 <h2> Talk: Multi Omics Data Analysis at the CMMC </h2>
 
 <img style=”float: right; padding: 0px 50px 50px 0px;” src="files/multi-omics-image.jpg" width="800" height="400" align="right"/><p>
+<br> <br> <br> 
 
 Bioinformatics is a powerful tool for cultivated meat and alternative proteins development. Multi-omics approaches integrate data from multiple distinct biological systems (e.g. genomics, transcriptomics, metabolomics) to obtain a more integrated and holistic model of the biological system at hand. In this short talk, I discuss a recent paper by Tasseff et al. (2019) on skin modeling using multi-omics datasets. The model combines differential equations and agent based models for water transport, molecular diffusion, and the cell cycle. 
-<br> 
+<br> <br> 
 
 Next, I discuss the famous techno-economic analysis (TEA) of David Humbird on scale-up economics for cultivated meat. I argued that the limitations Humbird identified to scale-up, such as metabolic inefficiency, motivate the need for multi-omics modeling in cultivated meat. Finally, I discuss some specific examples of omics datasets that will be needed for this task, including proteomics, genomics, and metabolomics. 
-<br> 
+<br> <br> 
 
 <a href="files/multi-omics-slides.pdf">[Powerpoint slides (PDF)]</a>
 
 <h2> Short Article: A Small-Data Approach to Machine Learning in Cellular Agriculture </h2>
 
 Mega-scale machine learning algorithms such as ChatGPT and AlphaFold are well known to the public. But these algorithms require millions of data points to train, while cellular agriculture practitioners would be lucky to have a few hundred for any particular task. Moreover, such data may come from heterogeneous sources, have missing fields, and be subject to observational noise. In this short article written for the CMMC, I argue that a different class of machine learning techniques, drawing on active learning and sequential optimization, can nevertheless have a huge impact on cellular agriculture. Indeed, they already have, and I cite several academic publications to this effect. 
-<br>
+<br><br> 
 <a href="files/cmmc_article_ml_small_data.pdf">[PDF]</a>
 
 </div>
