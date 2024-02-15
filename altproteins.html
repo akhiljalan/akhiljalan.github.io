@@ -45,19 +45,14 @@ In systems biology, <em>biological networks</em> are used to describe a diverse 
 
 <img style=”float: right; padding: 0px 50px 50px 0px;” src="files/ppi_comparison_300_nodes.png" width="800" height="500" align="right"  /><p>
 
-<p><em>Caption</em>: We compare 300 nodes that are well-aligned in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). Note that the true networks are much larger. The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
+<p><em>Figure</em>: We compare 300 nodes that are well-aligned in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). Note that the true networks are much larger. The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome. 
 
 <img src="files/bos_taurus_bos_mutus_100_eigvec_inner_products.png" alt="Figure">
 
-<p><em>Caption</em>: In the figure, we show an example comparing top 100 eigenvectors of <em>Bos mutus</em> and <em>Bos taurus</em>. Inner product of 1.0 indicates maximal alignment, while -1.0 indicates maximal disalignment. We can think of the scores as roughly measuring correlations between clusters in the network.</p>
-<br><br>
+<p><em>Figure</em>: In the figure, we show an example comparing top 100 eigenvectors of <em>Bos mutus</em> and <em>Bos taurus</em>. Inner product of 1.0 indicates maximal alignment, while -1.0 indicates maximal disalignment. We can think of the scores as roughly measuring correlations between clusters in the network.</p>
 
-<a href="https://github.com/akhiljalan/cellag-misc">Github Repository</a>
+<a href="https://github.com/akhiljalan/cellag-misc">[Github Repository]</a>
 
-
-<br>
-<br>
-In addition to learning from the differences in network data, algorithms should leverage prior knowledge of the differences between species so as to not overfit proteomic data. A promising approach is to use phylogenetic tree distance as a starting point for the transfer learner. In technical terms, phylogenetic information can parametrize a Bayesian prior for the distribution shift between the proteomes of different species. 
 <br>
 
 <h2> Talk: Multi Omics Data Analysis at the CMMC </h2>
