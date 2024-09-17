@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akhil Jalan's Work on Alternative Proteins">
+    <title>Alternative Proteins - Akhil Jalan</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://calendly.com/akhil_jalan">Calendly</a> 
+    </div>
+
+    <div class="content">
+        <h1>Alternative Proteins</h1>
+        
+        <p>This page lists some of my work on alternative proteins.</p>
+
+        <h2>Bioprocess Optimization Paper at IFPAC Global 2024</h2>
+        <p>
+            Bioprocess optimization is critical to scaling cultivated meat. In this work, we used machine learning and feedback control to perform real-time feedback control of a bioreactor cell culture with Raman spectroscopy. This work was joint with Kai Hoeffner, my former supervisor at Ark Biotech. I presented the work at IFPAC 2024, the premier global conference on process analytical technology (PAT) in bioprocessing and pharmaceuticals.
+        </p>
+        <p>
+            <a href="files/ifpac2024/slides-ifpac.pdf">[Talk slides (PDF)]</a><br>
+            <a href="ifpac2024.html">[Link to page with more details]</a>
+        </p>
+        <img src="files/ifpac2024/slide1.png" alt="IFPAC 2024 Slide">
+
+        <h2>Biological Network Inference via Graph Transfer Learning</h2>
+        <p>
+            In systems biology, <em>biological networks</em> are used to describe a diverse range of organism behaviors such as metabolism, gene expression, etc. For example, <em>protein interaction networks</em> are crucial tools for understanding the interaction of a cell line with candidate growth factors and recombinant proteins in a culture. However, these network data are missing or incomplete for many cell lines of interest, such as <em>bos taurus</em>. Therefore, we augment protein interaction data using <em>graph transfer learning</em> algorithms. These algorithms leverage information about protein interaction networks for better-studied cell lines (such as homo sapiens or CHO) to infer interactions for the true cell line of interest.
+        </p>
+        <img src="files/ppi_comparison_300_nodes.png" alt="Protein Interaction Networks Comparison">
+        <p><em>Figure</em>: We compare 300 nodes that are well-aligned in the protein interaction networks of both <em>homo sapiens</em> and <em>bos taurus</em> (cattle). Note that the true networks are much larger. The STRING functional protein database contains dense information about the interactions of these 300 proteins for both species; therefore, we can ''align'' the algorithm to learn differences in those regions, and then infer interactions in less-understood parts of the <em>bos taurus</em> proteome.</p>
+        
+        <img src="files/bos_taurus_bos_mutus_100_eigvec_inner_products.png" alt="Eigenvector Comparison">
+        <p><em>Figure</em>: In the figure, we show an example comparing top 100 eigenvectors of <em>Bos mutus</em> and <em>Bos taurus</em>. Inner product of 1.0 indicates maximal alignment, while -1.0 indicates maximal disalignment. We can think of the scores as roughly measuring correlations between clusters in the network.</p>
+        
+        <p><a href="https://github.com/akhiljalan/cellag-misc">[Github Repository]</a></p>
+
+        <h2>Survey Article: In Silico Alternative Proteins</h2>
+        <figure>
+            <img src="files/survey/pathways.png" alt="Central Carbon Metabolism">
+            <figcaption><em>Figure: Central carbon metabolism is key to the growth and division of cells. Omics datasets often model these pathways mathematically, through metabolic network analysis, flux balance analysis, or other methods. Source: <a href="https://www.researchgate.net/publication/337743524_Aberrant_mitochondrial_function_in_ageing_and_cancer">Whitehall and Greaves 2020.</a></em></figcaption>
+        </figure>
+        
+        <p>I survey 8 important classes of concrete problems in alternative proteins that require expertise in the <em>in silico</em> scientific and engineering disciplines (applied mathematics, statistics, computer science, electrical engineering, mechanical engineering, physics).</p>
+        
+        <p>The topics are:</p>
+        <ol>
+            <li>Active learning and experimental design</li>
+            <li>Protein Engineering in silico</li>
+            <li>Bioinformatics and multi-omics models</li>
+            <li>Bioprocess state estimation and control</li>
+            <li>Computational Fluid Dynamics for exploratory and digital twin modeling</li>
+            <li>3D Models for Adherent Cell Cultures and Scaffolds</li>
+            <li>Models for Texturization and Extrusion</li>
+            <li>Other Topics (Techno economic analysis, operations research, marketing and outreach)</li>
+        </ol>
+        
+        <p><a href="survey-sep1.html">[Link to survey (webpage)]</a></p>
+
+        <h2>Talk: Multi Omics Data Analysis at the CMMC</h2>
+        <img src="files/multi-omics-image.jpg" alt="Multi-omics Image">
+        <p>
+            Bioinformatics is a powerful tool for cultivated meat and alternative proteins development. Multi-omics approaches integrate data from multiple distinct biological systems (e.g. genomics, transcriptomics, metabolomics) to obtain a more integrated and holistic model of the biological system at hand. In this short talk, I discuss a recent paper by Tasseff et al. (2019) on skin modeling using multi-omics datasets. The model combines differential equations and agent based models for water transport, molecular diffusion, and the cell cycle.
+        </p>
+        <p>
+            Next, I discuss the famous techno-economic analysis (TEA) of David Humbird on scale-up economics for cultivated meat. I argued that the limitations Humbird identified to scale-up, such as metabolic inefficiency, motivate the need for multi-omics modeling in cultivated meat. Finally, I discuss some specific examples of omics datasets that will be needed for this task, including proteomics, genomics, and metabolomics.
+        </p>
+        <p><a href="files/multi-omics-slides.pdf">[Powerpoint slides (PDF)]</a></p>
+
+        <h2>Short Article: A Small-Data Approach to Machine Learning in Cellular Agriculture</h2>
+        <p>
+            Mega-scale machine learning algorithms such as ChatGPT and AlphaFold are well known to the public. But these algorithms require millions of data points to train, while cellular agriculture practitioners would be lucky to have a few hundred for any particular task. Moreover, such data may come from heterogeneous sources, have missing fields, and be subject to observational noise. In this short article written for the CMMC, I argue that a different class of machine learning techniques, drawing on active learning and sequential optimization, can nevertheless have a huge impact on cellular agriculture. Indeed, they already have, and I cite several academic publications to this effect.
+        </p>
+        <p><a href="files/cmmc_article_ml_small_data.pdf">[PDF]</a></p>
+    </div>
+</body>
+</html>
