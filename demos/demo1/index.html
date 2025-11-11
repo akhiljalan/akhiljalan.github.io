@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo 1 – Simple Simulation</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    button { margin-top: 1em; }
+    #output { margin-top: 1em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Simple Simulation Demo</h1>
+
+  <label for="param">Parameter:</label>
+  <input type="range" id="param" min="0" max="10" value="5" step="0.1" oninput="val.textContent=this.value">
+  <span id="val">5</span>
+
+  <br>
+  <button onclick="runSim()">Run Simulation</button>
+
+  <div id="output"></div>
+
+  <script>
+    async function runSim() {
+      const param = document.getElementById("param").value;
+      document.getElementById("output").textContent = "Running...";
+      try {
+        const resp = await fetch("https://sim-demo1.onrender.com/simulate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ param: param })
+        });
+        const data = await resp.json();
+        document.getElementById("output").textContent = "Result: " + data.result.toFixed(4);
+      } catch (err) {
+        document.getElementById("output").textContent = "Error: " + err;
+      }
+    }
+  </script>
+</body>
+</html>
